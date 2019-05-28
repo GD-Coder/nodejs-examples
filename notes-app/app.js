@@ -1,5 +1,6 @@
 const add = require('./utils')
+const getNotes = require('./notes')
 const sum = add(6, 9)
 
 
-console.log(sum)
+console.log(getNotes(1))

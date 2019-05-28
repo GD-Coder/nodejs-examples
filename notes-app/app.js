@@ -1,3 +1,3 @@
-const fs = require('fs')
+const words = require('./utils')
 
-fs.writeFileSync('notes.txt', 'This file was created with Node.js')
+console.log(words)

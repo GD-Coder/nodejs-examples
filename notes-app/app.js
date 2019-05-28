@@ -1,3 +1,5 @@
-const words = require('./utils')
+const add = require('./utils')
+const sum = add(6, 9)
 
-console.log(words)
+
+console.log(sum)

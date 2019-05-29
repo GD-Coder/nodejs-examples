@@ -2,12 +2,19 @@ const fs = require("fs")
 
 const noteService = {
 
+    notesBuffer: null,
+    notesJSON: null,
+    note: {},
     getNotes() {
-        fs.readFileSync("notes.txt")
+        this.notesBuffer = fs.readFileSync("notes.json")
+        this.notesJSON = this.notesBuffer.toString()
+        return this.notesJSON
     },
 
-    addNote(note) {
-        fs.writeFileSync("notes.txt", JSON.stringify(note))
+    addNote(title, body) {
+        this.note.title = title
+        this.note.body = body
+        fs.writeFileSync("notes.json", JSON.stringify(this.note))
     }
 }
 

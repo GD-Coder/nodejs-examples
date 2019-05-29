@@ -20,12 +20,7 @@ yargs.command({
         }
     },
     handler: (argv) =>
-        log(
-            chalk.yellow.bold("Title: ") +
-            chalk.blue(argv.title) + ", " +
-            chalk.yellow.bold("Body: ") +
-            chalk.blue(argv.body)
-        )
+        noteService.addNote(argv.title, argv.body)
 })
 
 yargs.command({
@@ -44,7 +39,7 @@ yargs.command({
 yargs.command({
     command: "list",
     describe: "List all notes",
-    handler: () => log("listing all added notes")
+    handler: () => log(JSON.parse(noteService.getNotes()))
 })
 
 yargs.command({

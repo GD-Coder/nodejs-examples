@@ -38,7 +38,7 @@ const noteService = {
     },
 
     findNote(title) {
-        return this.notes.filter(note => note.title === title)[0]
+        return this.notes.find(note => note.title === title)
     },
 
     saveNotes() {

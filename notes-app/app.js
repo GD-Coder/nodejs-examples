@@ -4,7 +4,7 @@ const noteService = require("./notes")
 
 const log = console.log
 
-const displayColoredResult = (color, message) => log(chalk[color](message))
+const displayColoredResult = (color, message, option) => option ? log(chalk[option][color](message)) : log(chalk[color](message))
 
 yargs.command({
     command: "add",
@@ -44,7 +44,14 @@ yargs.command({
 yargs.command({
     command: "list",
     describe: "List all notes",
-    handler: () => log(noteService.listNotes())
+    handler: () => {
+        let notes = noteService.listNotes()
+        notes != null ?
+            notes.forEach(note => {
+                displayColoredResult("green", "Title: " + note.title, "inverse")
+                displayColoredResult("green", "Body: " + note.body)
+            }) : displayColoredResult("red", "No notes exist yet...")
+    }
 })
 
 yargs.command({
@@ -57,7 +64,15 @@ yargs.command({
             type: 'string'
         }
     },
-    handler: (argv) => log(noteService.readNote(argv.title))
+    handler: (argv) => {
+        let note = noteService.readNote(argv.title)
+        if (note != null) {
+            displayColoredResult("green", "Title: " + note.title, "inverse")
+            displayColoredResult("green", "Body: " + note.body)
+        } else {
+            displayColoredResult("red", "Note doesn't exist...")
+        }
+    }
 })
 
 yargs.parse()

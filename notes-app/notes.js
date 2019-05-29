@@ -1,3 +1,14 @@
-const getNotes = id => "Your notes..."
+const fs = require("fs")
 
-module.exports = getNotes
+const noteService = {
+
+    getNotes() {
+        fs.readFileSync("notes.txt")
+    },
+
+    addNote(note) {
+        fs.writeFileSync("notes.txt", JSON.stringify(note))
+    }
+}
+
+module.exports = noteService

@@ -1,19 +1,29 @@
-const add = require('./utils')
-const getNotes = require('./notes')
-const validator = require('validator')
-const chalk = require('chalk')
-const sum = add(6, 9)
-const log = (data) => console.log(data)
+const chalk = require("chalk")
+const yargs = require("yargs")
+const noteService = require("./notes")
 
+const log = console.log
 
-log(getNotes(1))
+yargs.command({
+    command: "add",
+    describe: "Add a new note",
+    handler: () => log("added new note")
+})
 
-log(validator.isEmail('jimmy@jammy.com'))
+yargs.command({
+    command: "remove",
+    describe: "Remove a new note",
+    handler: () => log("removing note")
+})
 
-log(chalk.yellow.bold.inverse('Success!'))
+yargs.command({
+    command: "list",
+    describe: "List all notes",
+    handler: () => log("listing all added notes")
+})
 
-log(chalk.red.bold('Success!'))
-
-log(chalk.green('Success!'))
-
-log(chalk.blue(sum))
+yargs.command({
+    command: "read",
+    describe: "Read an added note",
+    handler: () => log("reading a note")
+})

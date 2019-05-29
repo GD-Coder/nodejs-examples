@@ -4,7 +4,7 @@ const noteService = require("./notes")
 
 const log = console.log
 
-const colorResult = (color, message) => chalk[color](message)
+const displayColoredResult = (color, message) => log(chalk[color](message))
 
 yargs.command({
     command: "add",
@@ -21,11 +21,9 @@ yargs.command({
             type: 'string'
         }
     },
-    handler: (argv) => log(
+    handler: (argv) =>
         noteService.addNote(argv.title, argv.body) ?
-        colorResult("green", "Note added successfully!") :
-        colorResult("red", "Note already exists...")
-    )
+        displayColoredResult("green", "Note added successfully!") : displayColoredResult("red", "Note already exists...")
 })
 
 yargs.command({
@@ -38,11 +36,9 @@ yargs.command({
             type: 'string'
         }
     },
-    handler: (argv) => log(
+    handler: (argv) =>
         noteService.removeNote(argv.title) ?
-        colorResult("green", "Note removed successfully!") :
-        colorResult("red", "Note doesn't exist...")
-    )
+        displayColoredResult("green", "Note removed successfully!") : displayColoredResult("red", "Note doesn't exist...")
 })
 
 yargs.command({

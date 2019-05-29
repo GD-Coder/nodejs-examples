@@ -19,8 +19,10 @@ yargs.command({
             type: 'string'
         }
     },
-    handler: (argv) =>
-        noteService.addNote(argv.title, argv.body)
+    handler: (argv) => log(
+        noteService.addNote(argv.title, argv.body) ?
+        chalk.green("Note added successfully!") : chalk.red("Note already exists...")
+    )
 })
 
 yargs.command({
@@ -33,13 +35,16 @@ yargs.command({
             type: 'string'
         }
     },
-    handler: () => log("removing note")
+    handler: (argv) => log(
+        noteService.removeNote(argv.title) ?
+        chalk.green("Note removed successfully!") : chalk.red("Note doesn't exist...")
+    )
 })
 
 yargs.command({
     command: "list",
     describe: "List all notes",
-    handler: () => log(JSON.parse(noteService.getNotes()))
+    handler: () => log(noteService.listNotes())
 })
 
 yargs.command({
@@ -52,7 +57,7 @@ yargs.command({
             type: 'string'
         }
     },
-    handler: () => log("reading a note")
+    handler: (argv) => log(noteService.readNote(argv.title))
 })
 
 yargs.parse()

@@ -12,9 +12,9 @@ request({ url: url, json: true }, (error, response) => {
   displayColoredResult(
     "green",
     "It is currently " +
-      JSON.stringify(response.body.currently.temperature) +
+      response.body.currently.temperature +
       " degrees out. There is a " +
-      JSON.stringify(response.body.currently.precipProbability) +
+      response.body.currently.precipProbability +
       "% chance of rain."
   )
 })

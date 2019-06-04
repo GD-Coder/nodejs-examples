@@ -50,9 +50,10 @@ const fetchWeatherReport = (weatherUrl) =>
 				displayError("red", "weather", "connection") : displayError("red", "weather", "location")
 		} else {
 			displayColoredResult("green",
-				"It is currently " + response.body.currently.temperature +
-				" degrees out. There is a " + response.body.currently.precipProbability +
-				"% chance of rain. " + response.body.daily.data[0].summary
+				"It is " + response.body.currently.temperature +
+				" degrees out right now, there is currently a " +
+				response.body.currently.precipProbability +
+				"% chance of rain. " + response.body.daily.summary
 			)
 		}
 	})

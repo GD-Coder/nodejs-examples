@@ -8,7 +8,8 @@ const log = console.log
 const displayColoredResult = (color, message, option) =>
 	option ? log(chalk[option][color](message)) : log(chalk[color](message))
 
-var weatherUrl
+var weatherUrl = ""
+var locationError = false
 
 yargs.command({
 	command: "show",
@@ -32,7 +33,8 @@ request({
 }, (error, response) => {
 	if (error) {
 		displayColoredResult("red", errorService.returnErrorResponse("location", "connection"))
-	} else if (!response.body.features) {
+	} else if (response.body.features.length === 0) {
+		locationError = true
 		displayColoredResult("red", errorService.returnErrorResponse("location", "location"))
 	} else {
 		weatherUrl = "https://api.darksky.net/forecast/c7ce5c066275d2ab3566eb37ea9fe713/" + response.body.features[0].center.reverse().toString()
@@ -45,7 +47,8 @@ setTimeout(() => {
 		json: true
 	}, (error, response) => {
 		if (error) {
-			displayColoredResult("red", errorService.returnErrorResponse("weather", "connection"))
+			!locationError ?
+				displayColoredResult("red", errorService.returnErrorResponse("weather", "connection")) : null
 		} else if (response.body.error) {
 			displayColoredResult("red", errorService.returnErrorResponse("weather", "location"))
 		} else {

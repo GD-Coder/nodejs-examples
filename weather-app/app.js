@@ -1,5 +1,6 @@
 const chalk = require("chalk")
 const request = require("request")
+const yargs = require("yargs")
 const geocodeService = require("./geocode")
 const errorService = require("./error")
 const log = console.log
@@ -8,6 +9,20 @@ const displayColoredResult = (color, message, option) =>
 	option ? log(chalk[option][color](message)) : log(chalk[color](message))
 
 var weatherUrl
+
+yargs.command({
+	command: "show",
+	describe: "Show weather for a given location",
+	builder: {
+		city: {
+			describe: "City for weather report",
+			demandOption: true,
+			type: 'string'
+		}
+	},
+	handler: (argv) =>
+		geocodeService.city = argv.city
+})
 
 request({
 	url: geocodeService.returnGeocode(),
@@ -21,8 +36,6 @@ request({
 		weatherUrl = "https://api.darksky.net/forecast/c7ce5c066275d2ab3566eb37ea9fe713/" + response.body.features[0].center.reverse().toString()
 	}
 })
-
-console.log(geocodeService.returnGeocode())
 
 setTimeout(() => {
 	request({

@@ -24,6 +24,8 @@ yargs.command({
 		geocodeService.city = argv.city
 })
 
+yargs.parse()
+
 request({
 	url: geocodeService.returnGeocode(),
 	json: true
@@ -58,4 +60,4 @@ setTimeout(() => {
 			)
 		}
 	})
-}, 2000)
+}, 1000)

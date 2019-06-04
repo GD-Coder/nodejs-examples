@@ -8,6 +8,9 @@ const log = console.log
 const displayColoredResult = (color, message, option) =>
 	option ? log(chalk[option][color](message)) : log(chalk[color](message))
 
+const displayError = (color, requestType, errorType) =>
+	displayColoredResult(color, errorService.returnErrorResponse(requestType, errorType))
+
 var weatherUrl = ""
 var locationError = false
 
@@ -32,10 +35,10 @@ request({
 	json: true
 }, (error, response) => {
 	if (error) {
-		displayColoredResult("red", errorService.returnErrorResponse("location", "connection"))
+		displayError("red", "location", "connection")
 	} else if (response.body.features.length === 0) {
 		locationError = true
-		displayColoredResult("red", errorService.returnErrorResponse("location", "location"))
+		displayError("red", "location", "location")
 	} else {
 		weatherUrl = "https://api.darksky.net/forecast/c7ce5c066275d2ab3566eb37ea9fe713/" + response.body.features[0].center.reverse().toString()
 	}
@@ -48,9 +51,9 @@ setTimeout(() => {
 	}, (error, response) => {
 		if (error) {
 			!locationError ?
-				displayColoredResult("red", errorService.returnErrorResponse("weather", "connection")) : null
+				displayError("red", "weather", "connection") : null
 		} else if (response.body.error) {
-			displayColoredResult("red", errorService.returnErrorResponse("weather", "location"))
+			displayError("red", "weather", "location")
 		} else {
 			displayColoredResult(
 				"green",

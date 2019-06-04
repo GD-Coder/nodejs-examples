@@ -11,7 +11,6 @@ const displayColoredResult = (color, message, option) =>
 const displayError = (color, requestType, errorType) =>
 	displayColoredResult(color, errorService.returnErrorResponse(requestType, errorType))
 
-var weatherUrl = ""
 var locationError = false
 
 yargs.command({
@@ -40,11 +39,12 @@ request({
 		locationError = true
 		displayError("red", "location", "location")
 	} else {
-		weatherUrl = "https://api.darksky.net/forecast/c7ce5c066275d2ab3566eb37ea9fe713/" + response.body.features[0].center.reverse().toString()
+		let weatherUrl = "https://api.darksky.net/forecast/c7ce5c066275d2ab3566eb37ea9fe713/" + response.body.features[0].center.reverse().toString()
+		fetchWeatherReport(weatherUrl)
 	}
 })
 
-setTimeout(() => {
+const fetchWeatherReport = (weatherUrl) =>
 	request({
 		url: weatherUrl,
 		json: true
@@ -66,4 +66,3 @@ setTimeout(() => {
 			)
 		}
 	})
-}, 1000)

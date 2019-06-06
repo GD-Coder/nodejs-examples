@@ -6,8 +6,8 @@ const log = console.log
 const displayColoredResult = (color, message, option) =>
   option ? log(chalk[option][color](message)) : log(chalk[color](message))
 
-geocode(process.argv[2], (error, geoData) => {
-  if (process.argv[2] == null) {
+geocode(process.argv[2], (error, { latitude, longitude, location }) => {
+  if (!process.argv[2]) {
     return displayColoredResult(
       "red",
       "Please provide a city to see weather information..."
@@ -15,18 +15,16 @@ geocode(process.argv[2], (error, geoData) => {
   }
   error
     ? displayColoredResult("red", error)
-    : forecast(geoData.latitude, geoData.longitude, (error, weatherData) => {
-        error
-          ? displayColoredResult("red", error)
-          : displayColoredResult(
-              "green",
-              `It is ${
-                weatherData.currentTemp
-              } degrees out right now. There is a ${
-                weatherData.rainProb
-              }% chance of rain. ${weatherData.summary} Forcast for: ${
-                geoData.location
-              }`
-            )
-      })
+    : forecast(
+        latitude,
+        longitude,
+        (error, { currentTemp: temprature, rainProb: rain, summary }) => {
+          error
+            ? displayColoredResult("red", error)
+            : displayColoredResult(
+                "green",
+                `It is ${temprature} degrees out right now. There is a ${rain}% chance of rain. ${summary} Forcast for: ${location}`
+              )
+        }
+      )
 })

@@ -2,7 +2,6 @@ const chalk = require("chalk")
 const yargs = require("yargs")
 const geocode = require("./utils/geocode")
 const forecast = require("./utils/forecast")
-const errorService = require("./error")
 const log = console.log
 
 const displayColoredResult = (color, message, option) =>

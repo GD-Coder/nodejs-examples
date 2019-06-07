@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<!--
+    * Last Updated: 06/07/2019
+    * Author: Gerald Downey
+-->
+
+<head>
+    <title>Your Weather</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/jquery-3.3.1.js"></script>
+    <script src="./js/jquery.dataTables.min.js"></script>
+    <script src="./js/dataTables.responsive.min.js"></script>
+    <script src="./js/responsive.bootstrap.min.js"></script>
+    <script src="./js/dataTables.bootstrap.min.js"></script>
+    <script src="./js/moment-with-locales.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/animate.css">
+    <link rel="stylesheet" type="text/css" href="./css/dreamscape.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/responsive.bootstrap.min.css">
+    <link rel="icon" href="./images/weather-icon.png">
+</head>
+
+<body>
+
+    {{> header }}
+
+    <div id="main-content" class="container main-content text-center quicksand">
+        <h3 class="big-title">Weather Forecast</h3>
+        <h1 class="dev-title" id="loader"></h1>
+        <h1 class="dev-title" id="city"></h1>
+        <p class="dev-paragraph" id="forecast"></p>
+        <p class="error-text" id="error"></p>
+        <form>
+            <input type="text" name="search" id="search" class="search" placeholder="Location">
+            <div class="button-bar">
+                <input id="generate-button" type="submit" value="Search" />
+            </div>
+        </form>
+    </div>
+
+    {{> footer }}
+    <script src="./js/client.js"></script>
+
+</body>
+
+</html>

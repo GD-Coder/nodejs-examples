@@ -18,12 +18,12 @@ geocode(process.argv[2], (error, { latitude, longitude, location }) => {
     : forecast(
         latitude,
         longitude,
-        (error, { currentTemp: temprature, rainProb: rain, summary }) => {
+        (error, { currentTemp, rainProb, summary }) => {
           error
             ? displayColoredResult("red", error)
             : displayColoredResult(
                 "green",
-                `It is ${temprature} degrees out right now. There is a ${rain}% chance of rain. ${summary} Forcast for: ${location}`
+                `It is ${currentTemp} degrees out right now. There is a ${rainProb}% chance of rain. ${summary} Forcast for: ${location}`
               )
         }
       )

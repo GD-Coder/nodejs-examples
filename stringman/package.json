@@ -1,0 +1,19 @@
+{
+  "name": "stringman",
+  "version": "1.0.0",
+  "description": "Small package with basic string manipulation functions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "truncate",
+    "strings",
+    "capitalize",
+    "snake",
+    "camel",
+    "case"
+  ],
+  "author": "Gerald Downey <grd8198@gmail.com>",
+  "license": "ISC"
+}

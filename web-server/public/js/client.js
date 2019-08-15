@@ -6,6 +6,10 @@ const city = document.querySelector("#city")
 const forecast = document.querySelector("#forecast")
 const error = document.querySelector("#error")
 const loader = document.querySelector("#loader")
+const hamburger = document.getElementById("hamburger")
+const menu = $(".nav.navbar-nav")[0]
+var menuIsOpen = false
+var style = menu.style
 
 const appendEllipsis = () => (loader.textContent = loader.textContent + ".")
 
@@ -26,10 +30,31 @@ weatherForm.addEventListener("submit", event => {
       loader.textContent = ""
       if (data.error) {
         error.textContent = data.error
+        search.value = ""
       } else {
+        search.value = ""
         city.textContent = data.location
         forecast.textContent = data.forecast
       }
     })
   })
 })
+
+function toggleMenu() {
+  function show(menu) {
+    hamburger.classList.add("hamburger-active")
+    style.height = "auto"
+  }
+
+  function hide(menu) {
+    hamburger.classList.remove("hamburger-active")
+    style.height = 0
+  }
+
+  if (menuIsOpen) {
+    hide(menu)
+  } else {
+    show(menu)
+  }
+  menuIsOpen = !menuIsOpen
+}

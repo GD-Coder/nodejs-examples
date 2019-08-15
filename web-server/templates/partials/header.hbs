@@ -1,10 +1,15 @@
 <nav id="navbar" class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
+    <ul class="container-fluid">
+        {{!-- <div class="navbar-header">
             <a class="navbar-brand" href="./index.html">
                 <img id="top-logo" class="animated slideInLeft" src="./../images/weather.png" />
             </a>
             <p class="dev-title animated slideInRight"></p>
+        </div> --}}
+        <div id="hamburger" onclick="toggleMenu()">
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
         </div>
         <ul class="nav navbar-nav">
             <li class="nced-link"><a href="/" id="home-link"><i class="material-icons home-icon">home</i></a>
@@ -18,5 +23,5 @@
                 document.write(moment().format('llll'))
             </script>
         </div>
-    </div>
+    </ul>
 </nav>

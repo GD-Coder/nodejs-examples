@@ -48,10 +48,6 @@
   src: url("../fonts/Quicksand-Bold.ttf");
 }
 
-.navbar {
-  min-height: 70px !important;
-}
-
 /* Button CSS */
 
 #generate-button {
@@ -815,5 +811,5 @@ p.caption {
 
 .nav > li {
   background-color: aliceblue;
-  max-height: 65px;
+  max-height: 45px !important;
 }

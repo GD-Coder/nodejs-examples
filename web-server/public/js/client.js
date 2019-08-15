@@ -58,3 +58,7 @@ function toggleMenu() {
   }
   menuIsOpen = !menuIsOpen
 }
+
+var path = document.querySelector(".rays")
+var l = path.getTotalLength()
+console.log(l)

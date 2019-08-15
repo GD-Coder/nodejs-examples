@@ -813,3 +813,73 @@ p.caption {
   background-color: aliceblue;
   max-height: 45px !important;
 }
+
+#cloud {
+  stroke-dasharray: 123;
+  animation: cloud-float 2.5s 1;
+  animation-timing-function: ease-out;
+  transition: 300ms all;
+}
+
+.rays {
+  stroke-dasharray: 52;
+  animation: ray-shine 10s infinite, ray-rotate 30s infinite;
+  animation-timing-function: ease-in;
+  transition: 300ms all;
+}
+
+@keyframes cloud-float {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes ray-rotate {
+  0% {
+    transform-origin: 60% center;
+    -webkit-transform: rotate(360deg);
+  }
+  100% {
+    transform-origin: 60% center;
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+@keyframes ray-shine {
+  100% {
+    stroke-dashoffset: 10;
+  }
+  90% {
+    stroke-dashoffset: 5;
+  }
+  80% {
+    stroke-dashoffset: 0;
+  }
+  70% {
+    stroke-dashoffset: 20;
+  }
+  60% {
+    stroke-dashoffset: 40;
+  }
+  50% {
+    stroke-dashoffset: 52;
+  }
+  40% {
+    stroke-dashoffset: 40;
+  }
+  30% {
+    stroke-dashoffset: 20;
+  }
+  20% {
+    stroke-dashoffset: 0;
+  }
+  10% {
+    stroke-dashoffset: 5;
+  }
+  0% {
+    stroke-dashoffset: 10;
+  }
+}

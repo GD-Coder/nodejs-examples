@@ -1,117 +1,116 @@
 @font-face {
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/material-icons/MaterialIcons-Regular.eot');
-    src: local('Material Icons'),
-        local('MaterialIcons-Regular'),
-        url('../fonts/material-icons/MaterialIcons-Regular.woff2') format('woff2'),
-        url('../fonts/material-icons/MaterialIcons-Regular.woff') format('woff'),
-        url('../fonts/material-icons/MaterialIcons-Regular.ttf') format('truetype');
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/material-icons/MaterialIcons-Regular.eot");
+  src: local("Material Icons"), local("MaterialIcons-Regular"),
+    url("../fonts/material-icons/MaterialIcons-Regular.woff2") format("woff2"),
+    url("../fonts/material-icons/MaterialIcons-Regular.woff") format("woff"),
+    url("../fonts/material-icons/MaterialIcons-Regular.ttf") format("truetype");
 }
 
 .material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: 'liga';
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
 }
 
 @font-face {
-    font-family: 'Quicksand';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/Quicksand-Regular.ttf');
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Quicksand-Regular.ttf");
 }
 
 body {
-    font-family: 'Quicksand' !important;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  font-family: "Quicksand" !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .footer {
-    bottom: 0;
-    position: relative;
-    left: 0;
-    right: 0;
+  bottom: 0;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin-bottom: 0 !important;
 }
 
 img#logo {
-    width: 5%;
-    margin-bottom: -35px;
-    margin-left: 20px;
-
+  width: 5%;
+  margin-bottom: -35px;
+  margin-left: 20px;
 }
 
 img#top-logo {
-    width: 65%;
-    position: relative;
-    bottom: 10px;
+  width: 65%;
+  position: relative;
+  bottom: 10px;
 }
 
 .navbar-default {
-    font-family: 'Quicksand'
+  font-family: "Quicksand";
 }
 
 .navbar-brand {
-    width: 165px;
+  width: 165px;
 }
 
 .quicksand {
-    font-family: "Quicksand"
+  font-family: "Quicksand";
 }
 
 .search {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-size: 20px;
-    text-align: center;
-    width: 30%;
-    letter-spacing: 1px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 20px;
+  text-align: center;
+  width: 30%;
+  letter-spacing: 1px;
 }
 
 li.dev-link a {
-    font-weight: bold;
-    font-size: 15px !important;
-    font-family: "Quicksand";
+  font-weight: bold;
+  font-size: 15px !important;
+  font-family: "Quicksand";
 }
 
 li.dev-link a:hover {
-    color: rgb(0, 194, 255) !important;
-    text-shadow: 1px 1px 5px rgb(230, 230, 230);
-    font-weight: bold;
+  color: rgb(0, 194, 255) !important;
+  text-shadow: 1px 1px 5px rgb(230, 230, 230);
+  font-weight: bold;
 }
 
 .users-icon {
-    position: relative;
-    top: 7px;
-    right: 8px;
+  position: relative;
+  top: 7px;
+  right: 8px;
 }
 
 div#time {
-    position: relative;
-    float: right;
-    top: 10px;
-    left: 5px;
-    font-weight: bold;
+  position: relative;
+  float: right;
+  top: 10px;
+  left: 5px;
+  font-weight: bold;
 }
 
 #last_edit {
-    font-family: 'Quicksand';
-    font-size: medium;
+  font-family: "Quicksand";
+  font-size: medium;
 }
 
 label,
@@ -119,189 +118,188 @@ a,
 li,
 input input-sm,
 td {
-    font-size: 15px;
-    letter-spacing: 1px;
-    font-family: 'Quicksand';
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-family: "Quicksand";
 }
 
 .dev-title {
-    letter-spacing: 1px;
-    text-align: center;
-    font-size: 20px;
-    font-family: 'Quicksand';
-    font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Quicksand";
+  font-weight: bold;
 }
 
 .dev-paragraph {
-    letter-spacing: 0.5px;
-    text-align: justify;
-    font-size: 15px;
-    font-family: 'Quicksand';
-    font-weight: bold;
+  letter-spacing: 0.5px;
+  text-align: justify;
+  font-size: 15px;
+  font-family: "Quicksand";
+  font-weight: bold;
 }
 
 .main-content {
-    margin-top: 1%;
-    flex-grow: 1;
+  margin-top: 1%;
+  flex-grow: 1;
 }
 
 .dev-normal-paragraph {
-    font-style: normal;
-    letter-spacing: 0.5px;
-    font-family: 'Quicksand';
+  font-style: normal;
+  letter-spacing: 0.5px;
+  font-family: "Quicksand";
 }
 
 .dev-header {
-    letter-spacing: 0.5px;
-    font-family: 'Quicksand';
-    font-weight: bold;
-    margin-left: 1%;
-    height: 250px;
+  letter-spacing: 0.5px;
+  font-family: "Quicksand";
+  font-weight: bold;
+  margin-left: 1%;
+  height: 250px;
 }
 
 .dev-form {
-    height: 150px;
+  height: 150px;
 }
 
 .dev-emphasis {
-    font-size: 18px;
-    letter-spacing: 0.7px;
-    font-style: oblique;
-    font-family: 'Quicksand';
-    font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 0.7px;
+  font-style: oblique;
+  font-family: "Quicksand";
+  font-weight: bold;
 }
 
 .dev-list li {
-    font-style: normal;
-    letter-spacing: 0.5px;
-    font-family: 'Quicksand';
+  font-style: normal;
+  letter-spacing: 0.5px;
+  font-family: "Quicksand";
 }
 
 a.dev-info-link:hover {
-    color: rgb(29, 222, 18);
-    font-size: 17px !important;
-    text-decoration: none !important;
+  color: rgb(29, 222, 18);
+  font-size: 17px !important;
+  text-decoration: none !important;
 }
 
 a.dev-info-link:visited {
-    color: red;
+  color: red;
 }
 
 .dev-info-link {
-    font-weight: bold;
-    text-decoration: none !important;
-    cursor: pointer;
+  font-weight: bold;
+  text-decoration: none !important;
+  cursor: pointer;
 }
 
 .loading-text {
-    border: none;
-    letter-spacing: 1px;
-    width: 100%;
-    text-align: center;
-    font-size: 20px;
-    font-family: "Quicksand";
-    font-weight: bold;
-    display: none;
-    margin-top: 100px;
+  border: none;
+  letter-spacing: 1px;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Quicksand";
+  font-weight: bold;
+  display: none;
+  margin-top: 100px;
 }
 
 .big-title {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 .error-text {
-    letter-spacing: 0.5px;
-    font-size: 15px;
-    font-family: 'Quicksand';
-    font-weight: bold;
-    color: red;
+  letter-spacing: 0.5px;
+  font-size: 15px;
+  font-family: "Quicksand";
+  font-weight: bold;
+  color: red;
 }
 
 .loading-wrapper {
-    height: 120px;
+  height: 120px;
 }
 
 .button-bar {
-    position: relative;
-    top: 100%;
+  position: relative;
+  top: 100%;
 }
 
 .left-column {
-    border-right: 1.5px solid rgb(177, 175, 175);
+  border-right: 1.5px solid rgb(177, 175, 175);
 }
 
 .dev-header-icon {
-    position: relative;
-    top: 4px;
+  position: relative;
+  top: 4px;
 }
 
 p.caption {
-    position: relative;
-    bottom: 40px;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    text-align: center;
-    width: 95%;
-    font-size: 17px;
-    font-family: 'Quicksand';
-    font-weight: bold;
-    letter-spacing: 1px;
+  position: relative;
+  bottom: 40px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 95%;
+  font-size: 17px;
+  font-family: "Quicksand";
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .dev-mini-title {
-    font-size: 18px;
-    font-family: 'Quicksand';
-    font-weight: bold;
-    letter-spacing: 1px;
+  font-size: 18px;
+  font-family: "Quicksand";
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .dev-center {
-    text-align: center;
+  text-align: center;
 }
 
 .dev-info-div {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .sticky {
-    position: fixed !important;
-    top: 0;
-    width: 100%;
-    z-index: 5;
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  z-index: 5;
 }
 
-.sticky+.container {
-    padding-top: 60px;
+.sticky + .container {
+  padding-top: 60px;
 }
-
 
 #welcome_text {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .dev-padded-sides-lg {
-    padding: 10px 40px;
+  padding: 10px 40px;
 }
 
 .dev-mt-2 {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .dev-mt-100 {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 @media only screen and (max-width: 680px) {
-    .nav.navbar-nav {
-        height: 0px;
-        overflow: hidden;
-        position: fixed;
-        top: 0;
-        left: 0;
-        margin: 0;
-        width: 100vw;
-        background: transparent;
-        z-index: 10;
-        box-shadow: 4px 4px 16px;
-    }
+  .nav.navbar-nav {
+    height: 0px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100vw;
+    background: transparent;
+    z-index: 10;
+    box-shadow: 4px 4px 16px;
+  }
 }

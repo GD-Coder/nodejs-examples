@@ -481,7 +481,7 @@ body {
 }
 
 .navbar-default {
-  background-color: aliceblue !important;
+  background-color: #cbe2f7 !important;
   border-color: #92d8f5 !important;
 }
 
@@ -491,7 +491,7 @@ body {
   left: 0;
   right: 0;
   margin-bottom: 0 !important;
-  background-color: aliceblue !important;
+  background-color: #cbe2f7 !important;
   border: 1px solid #92d8f5 !important;
   margin-top: 50px;
 }
@@ -810,7 +810,7 @@ p.caption {
 }
 
 .nav > li {
-  background-color: aliceblue;
+  background-color: #cbe2f7;
   max-height: 45px !important;
 }
 
@@ -823,7 +823,7 @@ p.caption {
 
 .rays {
   stroke-dasharray: 52;
-  animation: ray-shine 10s infinite, ray-rotate 30s infinite;
+  animation: ray-shine 20s infinite, ray-rotate 30s infinite;
   animation-timing-function: ease-in;
   transition: 300ms all;
 }

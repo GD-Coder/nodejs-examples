@@ -636,7 +636,7 @@ td {
 }
 
 .dev-emphasis:hover {
-  color:rgb(10, 187, 10);
+  color: rgb(10, 187, 10);
   text-decoration: none;
   transition: 500ms;
 }
@@ -682,7 +682,7 @@ a.dev-info-link:visited {
 
 .list-text {
   display: inline-flex;
-  font-family: "Quicksand Med";
+  font-family: "Quicksand Bold";
   margin-left: 15px;
   letter-spacing: 1.6px;
 }

@@ -30,17 +30,17 @@ app.get("", (req, res) => {
 
 app.get("/about", (req, res) => {
   res.render("about", {
-    title: "About page",
+    title: "About This App",
     creator: "Gerald Downey"
   })
 })
 
-app.get("/help", (req, res) => {
-  res.render("help", {
-    title: "Help page",
-    creator: "Gerald Downey"
-  })
-})
+// app.get("/help", (req, res) => {
+//   res.render("help", {
+//     title: "Help page",
+//     creator: "Gerald Downey"
+//   })
+// })
 
 app.get("/weather", ({ query }, res) => {
   const address = query.address

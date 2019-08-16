@@ -28,8 +28,88 @@
 
     {{> header }}
 
-    <div id="main-content" class="container main-content">
-        <h1>{{ title }}</h1>
+    <div id="main-content" class="container main-content text-center quicksand">
+        <h3 class="big-title">About This App</h3>
+        <hr>
+        <p class="dev-paragraph" id="app-description">
+            This is a small weather app built with NodeJS and used to find the forecast for a given location; cities,
+            states, zip codes and street addresses can be used. The application makes use of asynchronous calls to
+            mapbox.com and darksky.net to fetch location and weather information. Follow this link to <a target="_blank"
+                href="https://github.com/GD-Coder/nodejs-examples/tree/master/web-server" class="dev-emphasis">view the
+                code</a>.
+        </p>
+        <br><br>
+        <h3 class="med-title">Showcased Concepts</h3>
+        <hr>
+        <div class="col-lg-4 col-md-4 col-sm-12 list-wrapper">
+            <p class="dev-paragraph" id="app-description">
+                <ul class="dev-list">
+                    <li class="dev-list-item"><i class="material-icons check-icon">check</i>
+                        <p class="list-text">NodeJS Fundementals</p>
+                    </li>
+                    <li class="dev-list-item"><i class="material-icons check-icon">check</i>
+                        <p class="list-text">Functional Programming</p>
+                    </li>
+                    <li class="dev-list-item"><i class="material-icons check-icon">check</i>
+                        <p class="list-text">Error Handling</p>
+                    </li>
+                    <li class="dev-list-item"><i class="material-icons check-icon">check</i>
+                        <p class="list-text">API Integration</p>
+                    </li>
+                    <li class="dev-list-item"><i class="material-icons check-icon">check</i>
+                        <p class="list-text">HTML5 Templating</p>
+                    </li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-12 list-wrapper">
+            <p class="dev-paragraph" id="app-description">
+                <ul class="dev-list">
+                    <li class="dev-list-item"><i class="material-icons check-icon">check</i>
+                        <p class="list-text">Asynchronous Programming</p>
+                    </li>
+                    <li class="dev-list-item"><i class="material-icons check-icon">check</i>
+                        <p class="list-text">Object Deconstructing</p>
+                    </li>
+                    <li class="dev-list-item"><i class="material-icons check-icon">check</i>
+                        <p class="list-text">Handling JSON</p>
+                    </li>
+                    <li class="dev-list-item"><i class="material-icons check-icon">check</i>
+                        <p class="list-text">SVG Creation</p>
+                    </li>
+                    <li class="dev-list-item"><i class="material-icons check-icon">check</i>
+                        <p class="list-text">SVG Animation</p>
+                    </li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-12 list-wrapper">
+            <p class="dev-paragraph" id="app-description">
+                <ul class="dev-list">
+                    <li class="dev-list-item"><i class="material-icons check-icon">check</i>
+                        <p class="list-text">Responsive Design</p>
+                    </li>
+                    <li class="dev-list-item"><i class="material-icons check-icon">check</i>
+                        <p class="list-text">CSS3 Styling</p>
+                    </li>
+                    <li class="dev-list-item"><i class="material-icons check-icon">check</i>
+                        <p class="list-text">UI/UX Design</p>
+                    </li>
+                    <li class="dev-list-item"><i class="material-icons check-icon">check</i>
+                        <p class="list-text">ES6 Syntax</p>
+                    </li>
+                    <li class="dev-list-item"><i class="material-icons check-icon">check</i>
+                        <p class="list-text">Promises</p>
+                    </li>
+                </ul>
+            </p>
+        </div>
+        {{!-- <h1>{{ title }}</h1> --}}
+        {{!-- <img src="./images/gd.png" style="margin-left: 2%; width: 20%;" />
+        <div id="author-description">Gerald Downey, <br> Full Stack Web Developer</div> --}}
+
     </div>
 
     {{> footer }}

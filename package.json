@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node web-server/src/app.js"
+    "start": "node web-server/src/app.js",
+    "dev": "nodemon web-server/src/app.js -e js,hbs"
   },
   "keywords": [],
   "author": "Gerald Downey",

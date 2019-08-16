@@ -10,6 +10,8 @@
     <title>Your Weather</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Gerald's NodeJS Weather Application" />
+    <meta property="og:image" content="./images/svg/weather.svg" />
     <script src="./js/jquery-3.3.1.js"></script>
     <script src="./js/jquery.dataTables.min.js"></script>
     <script src="./js/dataTables.responsive.min.js"></script>
@@ -30,7 +32,9 @@
 
     <div id="main-content" class="container main-content text-center quicksand">
         <h3 class="big-title">Weather</h3>
-        <h1 class="dev-title" id="loader"></h1>
+        <hr>
+        <h1 class="dev-title" id="loader">Please enter a city, state, zip code or street address to see the forecast for
+            that location.</h1>
         <h1 class="dev-title" id="city"></h1>
         <p class="dev-paragraph" id="forecast"></p>
         <p class="error-text" id="error"></p>

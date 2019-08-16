@@ -48,6 +48,21 @@
   src: url("../fonts/Quicksand-Bold.ttf");
 }
 
+#author-description {
+  background-color: #000000ad;
+  width: fit-content;
+  padding: 5px;
+  border-radius: 10px;
+  position: relative;
+  bottom: 35px;
+  font-size: 8px;
+  color: white;
+  font-family: "Quicksand Bold";
+  letter-spacing: 1.6px;
+  left: 40px;
+  text-align: center;
+}
+
 /* Button CSS */
 
 #generate-button {
@@ -614,10 +629,16 @@ td {
 
 .dev-emphasis {
   font-size: 18px;
-  letter-spacing: 0.7px;
-  font-style: oblique;
-  font-family: "Quicksand";
-  font-weight: bold;
+  letter-spacing: inherit;
+  font-family: "Quicksand Bold";
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dev-emphasis:hover {
+  color:rgb(10, 187, 10);
+  text-decoration: none;
+  transition: 500ms;
 }
 
 .dev-list li {
@@ -654,9 +675,34 @@ a.dev-info-link:visited {
   margin-top: 100px;
 }
 
+.dev-list {
+  list-style-type: none;
+  text-align: left;
+}
+
+.list-text {
+  display: inline-flex;
+  font-family: "Quicksand Med";
+  margin-left: 15px;
+  letter-spacing: 1.6px;
+}
+
+.check-icon {
+  position: relative;
+  top: 6px;
+  font-weight: bold;
+  color: rgb(10, 187, 10);
+}
+
 .big-title {
   font-size: 40px;
   font-family: "Quicksand Bold";
+  color: #646767;
+}
+
+.med-title {
+  font-size: 30px;
+  font-family: "Quicksand Med";
   color: #646767;
 }
 

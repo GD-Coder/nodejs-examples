@@ -5,10 +5,12 @@ const connectionURL = "mongodb://127.0.0.1:27017/task-manager-api"
 mongoose.connect(connectionURL, { useNewUrlParser: true, useCreateIndex: true })
 
 const User = mongoose.model("User", {
-  name: { type: String, required: true },
+  name: { type: String, required: true, trim: true },
   email: {
     type: String,
     required: true,
+    trim: true,
+    lowecase: true,
     validate(value) {
       if (!validator.isEmail(value)) {
         throw new Error("Email is invalid!")
@@ -17,6 +19,7 @@ const User = mongoose.model("User", {
   },
   age: {
     type: Number,
+    default: 0,
     validate(value) {
       if (value < 0) {
         throw new Error("Age must be a positive number!")
@@ -31,9 +34,8 @@ const Task = mongoose.model("Task", {
 })
 
 const user = new User({
-  name: "Nikki",
-  email: "dipsy",
-  age: 30
+  name: "Test User               ",
+  email: "dipsy@doodle.com             "
 })
 
 const task = new Task({

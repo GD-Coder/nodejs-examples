@@ -875,19 +875,19 @@ p.caption {
 
 #cloud {
   stroke-dasharray: 123;
-  animation: cloud-float 2.5s 1;
-  animation-timing-function: ease-out;
+  animation: cloud-fade 5s 1;
+  animation-timing-function: linear;
   transition: 300ms all;
 }
 
 .rays {
   stroke-dasharray: 52;
   animation: ray-shine 20s infinite, ray-rotate 30s infinite;
-  animation-timing-function: ease-in;
+  animation-timing-function: linear;
   transition: 300ms all;
 }
 
-@keyframes cloud-float {
+@keyframes cloud-fade {
   0% {
     opacity: 0;
   }
@@ -898,11 +898,11 @@ p.caption {
 
 @keyframes ray-rotate {
   0% {
-    transform-origin: 60% center;
+    transform-origin: 60.2% 50.3%;
     -webkit-transform: rotate(360deg);
   }
   100% {
-    transform-origin: 60% center;
+    transform-origin: 60.2% 50.3%;
     -webkit-transform: rotate(0deg);
   }
 }

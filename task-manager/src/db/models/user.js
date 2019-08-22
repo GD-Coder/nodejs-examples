@@ -104,6 +104,7 @@ userSchema.methods.toJSON = function () {
   let publicUser = this.toObject()
   delete publicUser.password
   delete publicUser.tokens
+  delete publicUser.avatar
   return publicUser
 }
 

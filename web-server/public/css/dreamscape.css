@@ -591,6 +591,14 @@ td {
   text-align: center;
   font-size: 20px;
   font-family: "Quicksand Med";
+  color: #646767;
+}
+
+.footer-text {
+  letter-spacing: 1.1px;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Quicksand Med";
   color: #fff;
 }
 

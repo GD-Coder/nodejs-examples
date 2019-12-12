@@ -27,7 +27,7 @@ weatherForm.addEventListener("submit", event => {
         search.value = ""
       } else {
         search.value = ""
-        city.textContent = data.location
+        city.innerHTML = data.location
         forecast.textContent = data.forecast
       }
     })
